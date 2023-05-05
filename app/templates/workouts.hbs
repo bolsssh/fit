@@ -1,5 +1,3 @@
 <div class="slider-menu">
-    {{#each this.model as |workout|}}
-        {{menu-slider label=workout.name text=workout.description}}
-    {{/each}}
+   {{slider-list list=this.model}}
 </div>

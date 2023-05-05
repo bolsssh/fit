@@ -1,10 +1,11 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'core',
     environment: environment,
     baseURL: '/',
+    backendURL: 'https://localhost:44345',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -17,15 +18,23 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    // 'ember-simple-auth-jwt': {
+    //   headers: {
+    //     'sec-fetch-mode': 'cors',
+    //   },
+    // }
   };
-
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.authServerBaseUrl = ENV.backendURL;
+    ENV.authServerTokenEndpoint = `${ENV.authServerBaseUrl}/api/auth`;
+    ENV.authServerRefreshTokenEndpoint = `${ENV.authServerBaseUrl}/api/auth`;
   }
 
   if (environment === 'test') {

@@ -1,0 +1,70 @@
+.user-form {
+    background: rgb(254, 254, 254);
+    /*background: rgba(0,0,0,0.1);*/
+    border-radius: 10px;
+    padding: 15%;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+}
+
+.user-form form {
+    /*background: rgba(0,0,0,0.1);*/
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-form form unput {
+    /*background: rgba(0,0,0,0.1);*/
+    width: 100%;
+}
+
+.flex-row-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form button {
+    position:relative;
+    overflow:hidden;
+    width:7rem;
+    color:#5585ff;
+    border:2px solid #5585ff;
+    background-color:transparent;
+    cursor:pointer;
+    line-height:2;
+    margin:0;
+    padding:0;
+    border-radius:0.25rem;
+    font-size:1.125rem;
+    text-transform:lowercase;
+    outline:none;
+    transition:transform .125s;
+}
+
+
+a {
+    box-shadow: inset 0 0 0 0 #5585ff;
+    color: #5585ff;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover {
+    color: #333333;
+    /*box-shadow: inset 200px 0 0 0 #5585ff;*/
+}
+
+/* Presentational styles */
+a {
+    color: #5585ff;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}

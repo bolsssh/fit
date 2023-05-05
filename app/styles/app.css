@@ -1,6 +1,12 @@
-* {
+@import 'input.css';
+@import 'form.css';
+@import 'common.css';
+@import 'slider.scss';
+
+*, *::before, *::after {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    font-family: Helvetica;
 }
 
 body {
@@ -16,12 +22,13 @@ body {
     margin: 0;
     display: flex;
     width: 90vw;
-    font-family: "Microsoft JhengHei";
 }
 
 .panel {
     /*background-color: cornflowerblue ;*/
-    background: rgba(240,255,255,0.1);
+    /* background: rgba(240,255,255,0.1); ;*/
+    /*background: rgba(0, 0, 0, 0.1);*/
+    background: rgb(254, 254, 254);
     /* background-color: azure;
      opacity: .1;*/
     height: 50vh;
@@ -34,7 +41,7 @@ body {
     /*-webkit-transition: all 700ms ease-in;*/
 }
 
-.panel img{
+.panel img {
     display: none;
     opacity: 0;
 }
@@ -47,6 +54,7 @@ body {
     margin: auto;
     opacity: 0;
 }
+
 /*.panel h3 {*/
 /*    font-size: 20px;*/
 /*    position: inherit;*/
@@ -57,11 +65,12 @@ body {
 /*}*/
 .panel.active-panel {
     flex: 5;
-    background: rgba(240,255,255,0.2);
+    /*background: rgba(240,255,255,0.2);*/
+    /*background: rgba(0, 0, 0, 0.2);*/
     /*    opacity: .2; ;*/
     object-position: center center;
     text-align: center;
-    margin:auto;
+    margin: auto;
 }
 
 .panel.active-panel img {
@@ -71,43 +80,61 @@ body {
     filter: invert(98%) brightness(20%);
     /*filter: invert(98%) sepia(92%) saturate(1143%) hue-rotate(332deg) brightness(102%) contrast(104%);*/
     display: block;
-    margin:auto;
+    margin: auto;
     opacity: 1;
     margin-top: 40px !important;
     /*transition: opacity 1s ease-in 1s;*/
 }
+
 .panel.active-panel .content {
     opacity: 1;
     /*transition: opacity 0.1s ease-in 0.3s;*/
-    margin:auto;
+    margin: auto;
 }
 
-.panel p{
+.panel p {
     font-size: 16px;
     margin: 20px;
     text-align: justify;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 /*.panel.active-panel content h3 {*/
 /*    opacity: 1;*/
 /*    !*transition: opacity 0.1s ease-in 0.3s;*!*/
 /*    margin:auto;*/
 /*}*/
 body {
+    /*background: rgb(253, 253, 253);*/
     background: linear-gradient(239deg, #158bec, #ec9c15);
     background-size: 400% 400%;
     animation: backAnimation 10s ease infinite;
 }
 
 @keyframes backAnimation {
-    0%{
-        background-position:0% 50%
+    0% {
+        background-position: 0% 50%
     }
-    50%{
-        background-position:100% 50%
+    50% {
+        background-position: 100% 50%
     }
-    100%{
-        background-position:0% 50%
+    100% {
+        background-position: 0% 50%
     }
+}
+
+.content {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.flex-row-two {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: inherit;
 }

@@ -1,0 +1,23 @@
+<div class="walkthrough">
+    <div class="walkthrough-pagination">
+        {{#each list as |item|}}
+            <a class="dot"></a>
+        {{/each}}
+    </div>
+    <div class="walkthrough-body">
+        <ul class="screens animate" onclick={{action "transition"}}>
+            {{#each list as |item|}}
+                <li class="screen">
+                    <div class="media logo">
+                        {{#if item.imgSource}}
+                            <img class="logo" src={{item.imgSource}}>
+                        {{/if}}
+                    </div>
+                    <h3>{{item.label}}</h3>
+                </li>
+            {{/each}}
+        </ul>
+        <button class="prev-screen click" onclick={{action "prevScreen"}}></button>
+        <button class="next-screen click" onclick={{action "nextScreen"}}></button>
+    </div>
+</div>

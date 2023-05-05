@@ -1,0 +1,142 @@
+@import 'input';
+@import 'form';
+@import 'common';
+@import 'slider';
+@import 'workout';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: Helvetica;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.slider-menu {
+  margin: 0;
+  display: flex;
+  //width: 90vw;
+}
+
+.panel {
+  /*background-color: cornflowerblue ;*/
+  /* background: rgba(240,255,255,0.1); ;*/
+  /*background: rgba(0, 0, 0, 0.1);*/
+  background: rgb(254, 254, 254);
+  /* background-color: azure;
+   opacity: .1;*/
+  height: 50vh;
+  border-radius: 25px;
+  color: #262626;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  /*-webkit-transition: all 700ms ease-in;*/
+}
+
+.panel img {
+  display: none;
+  opacity: 0;
+}
+
+.panel .content {
+  font-size: 20px;
+  position: inherit;
+  bottom: -30px;
+  /*left: 20px;*/
+  margin: auto;
+  opacity: 0;
+}
+
+/*.panel h3 {*/
+/*    font-size: 20px;*/
+/*    position: inherit;*/
+/*    bottom: -30px;*/
+/*    !*left: 20px;*!*/
+/*    margin: auto;*/
+/*    opacity: 0;*/
+/*}*/
+.panel.active-panel {
+  flex: 5;
+  /*background: rgba(240,255,255,0.2);*/
+  /*background: rgba(0, 0, 0, 0.2);*/
+  /*    opacity: .2; ;*/
+  object-position: center center;
+  text-align: center;
+  margin: auto;
+}
+
+.panel.active-panel img {
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  filter: invert(98%) brightness(20%);
+  /*filter: invert(98%) sepia(92%) saturate(1143%) hue-rotate(332deg) brightness(102%) contrast(104%);*/
+  display: block;
+  margin: auto;
+  opacity: 1;
+  margin-top: 40px !important;
+  /*transition: opacity 1s ease-in 1s;*/
+}
+
+.panel.active-panel .content {
+  opacity: 1;
+  /*transition: opacity 0.1s ease-in 0.3s;*/
+  margin: auto;
+}
+
+.panel p {
+  font-size: 16px;
+  margin: 20px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*.panel.active-panel content h3 {*/
+/*    opacity: 1;*/
+/*    !*transition: opacity 0.1s ease-in 0.3s;*!*/
+/*    margin:auto;*/
+/*}*/
+body {
+  /*background: rgb(253, 253, 253);*/
+  //background: linear-gradient(239deg, #158bec, #ec9c15);
+  background: linear-gradient(239deg, #ffffff, #9e66c6);
+  background-size: 400% 400%;
+  animation: backAnimation 10s ease infinite;
+}
+
+@keyframes backAnimation {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.content {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+.flex-row-two {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: inherit;
+}

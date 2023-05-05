@@ -1,0 +1,20 @@
+<div class="user-form">
+    <h1 for="user-form">Авторизация</h1>
+    <form {{action 'authenticate' on='submit'}}>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" id='login' placeholder='введите логин' value=login}}
+            <label class="text-field__label" for="login">Логин</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" id='password' placeholder='введите пароль' type='password' value=password}}
+            <label class="text-field__label" for="password">Пароль</label>
+        </div>
+        <div class="flex-row-two">
+            {{#link-to 'register'}}Нет аккаунта ?{{/link-to}}
+            <button type="submit">Войти</button>
+        </div>
+        {{#if errorMessage}}
+            <p>{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>

@@ -43,7 +43,6 @@ export default Ember.Controller.extend({
         });
       record.save().catch((error) => {
          if (error && error.errors && error.errors[0].status == 500) {
-          console.log(500)
           this.set('errorMessage', 'Пользователь уже существует')
           return;
         }
@@ -55,10 +54,11 @@ export default Ember.Controller.extend({
           record.get('login'), record.get('password'))
         .catch((reason) => {
           this.set('errorMessage', reason.error || reason);
+        }).then(()=>{
+          if (this.get('session.isAuthenticated')) {
+            thisRouter.transitionToRoute('home');
+          }
         })
-        if (this.get('session.isAuthenticated')) {
-          thisRouter.transitionToRoute('home');
-        }
       })
     }
   },

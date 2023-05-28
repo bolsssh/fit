@@ -1,4 +1,6 @@
-.user-form {
+@import "colors";
+
+.info-form {
     background: rgb(254, 254, 254);
     /*background: rgba(0,0,0,0.1);*/
     border-radius: 10px;
@@ -9,7 +11,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
 }
 
-.user-form form {
+.info-form form {
     /*background: rgba(0,0,0,0.1);*/
     margin: auto;
     width: 80%;
@@ -17,7 +19,7 @@
     flex-direction: column;
 }
 
-.user-form form unput {
+.info-form form unput {
     /*background: rgba(0,0,0,0.1);*/
     width: 100%;
 }
@@ -32,8 +34,8 @@ form button {
     position:relative;
     overflow:hidden;
     width:7rem;
-    color:#5585ff;
-    border:2px solid #5585ff;
+    color: $colorfulElement;
+    border:2px solid $colorfulElement;
     background-color:transparent;
     cursor:pointer;
     line-height:2;
@@ -48,8 +50,8 @@ form button {
 
 
 a {
-    box-shadow: inset 0 0 0 0 #5585ff;
-    color: #5585ff;
+    box-shadow: inset 0 0 0 0 $colorfulElement;
+    color: $colorfulElement;
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -62,9 +64,33 @@ a:hover {
 
 /* Presentational styles */
 a {
-    color: #5585ff;
+    color: $colorfulElement;
     font-size: 23px;
     font-weight: 700;
     line-height: 1.5;
     text-decoration: none;
+}
+
+.result {
+    .result-field {
+        position:relative;
+        overflow:hidden;
+        color:$colorfulElement;
+        text-align: center;
+        border:2px solid $colorfulElement;
+        background-color:transparent;
+        line-height:2;
+        margin:1rem;
+        //padding:0;
+        border-radius:0.25rem;
+        font-size:1.125rem;
+        outline:none;
+        transition:transform .125s;
+        
+        p {
+            display: inline;
+            font-size: 1.3rem ;
+            //color: ;
+        }
+    }
 }

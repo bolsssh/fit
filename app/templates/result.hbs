@@ -1,0 +1,16 @@
+<div class="info-form result">
+    <h1 for="info-form">Результат</h1>
+    <div class="result-field row">
+       Время тренировки: <br><p>{{workoutTime}}</p>
+    </div>
+    <div class="result-field row">
+        Ваш балл: <br><p>{{model.score}}</p>
+    </div>
+    <br>
+    <div class="row text-center">
+        {{#link-to 'home'}}Ок{{/link-to}}
+    </div>
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+</div>

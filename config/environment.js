@@ -7,6 +7,7 @@ module.exports = function(environment) {
     baseURL: '/',
     backendURL: 'https://localhost:44345',
     locationType: 'auto',
+    //imgPath: 'assets/images/',
     EmberENV: {
       FEATURES: {
         //'ember-metal-ember-assign': true,

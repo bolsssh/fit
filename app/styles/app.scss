@@ -3,11 +3,15 @@
 @import 'common';
 @import 'slider';
 @import 'workout';
+@import 'loader';
+@import 'colors';
+
 
 *, *::before, *::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: Helvetica;
+  user-select: none;
 }
 
 body {
@@ -104,14 +108,14 @@ body {
 /*.panel.active-panel content h3 {*/
 /*    opacity: 1;*/
 /*    !*transition: opacity 0.1s ease-in 0.3s;*!*/
-/*    margin:auto;*/
+/*    margin:auto; $backColorPassive */
 /*}*/
 body {
   /*background: rgb(253, 253, 253);*/
   //background: linear-gradient(239deg, #158bec, #ec9c15);
-  background: linear-gradient(239deg, #ffffff, #9e66c6);
+  background: linear-gradient(239deg, $backColorPassive , $backColorActive);
   background-size: 400% 400%;
-  animation: backAnimation 10s ease infinite;
+  animation: backAnimation 10s ease-in-out infinite;
 }
 
 @keyframes backAnimation {
@@ -127,16 +131,27 @@ body {
 }
 
 .content {
-  width: 80%;
+  //width: 80%;
   text-align: center;
-  margin: auto;
+  //margin: auto;
 }
-
-
 
 .flex-row-two {
   margin-top: 12px;
   display: flex;
   flex-direction: row;
   flex-grow: inherit;
+}
+
+.welcome-login {
+  font-family: "Heebo";
+  font-size: 20px;
+  position:absolute;
+  display: none;
+  top: 2rem;
+  right: 5rem;
+  font-weight: bold;
+  perspective: 1000px;
+  color: $colorfulElement;
+  font-style: italic;
 }

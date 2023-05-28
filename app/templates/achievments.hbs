@@ -1,0 +1,19 @@
+<div class="info-form result">
+    <h1 for="info-form">Достижения</h1>
+    <div class="result-field row">
+        Вы тренировались: <br><p>{{model.totalDuring}}</p>
+    </div>
+    <div class="result-field row">
+        Ваш средний балл: <br><p>{{model.avarageScore}}</p>
+    </div>
+    <div class="result-field row">
+        Вы провели: <p>{{model.totalCount}} </p>тренировок
+    </div>
+    <br>
+    <div class="row text-center">
+        {{#link-to 'home'}}Ок{{/link-to}}
+    </div>
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+</div>

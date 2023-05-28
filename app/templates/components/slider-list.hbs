@@ -10,7 +10,7 @@
                 <li class="screen">
                     <div class="media logo">
                         {{#if item.imgSource}}
-                            <img class="logo" src={{item.imgSource}}>
+                            <img class="logo" src={{concat imgPrefix item.imgSource}}>
                         {{/if}}
                     </div>
                     <h3>{{item.label}}</h3>
@@ -18,7 +18,7 @@
                 </li>
             {{/each}}
         </ul>
-        <button class="prev-screen click" onclick={{action "prevScreen"}}></button>
+        <button class="prev-screen click" onclick={{action "prevScreen"}}><div></div></button>
         <button class="next-screen click" onclick={{action "nextScreen"}}></button>
     </div>
 </div>

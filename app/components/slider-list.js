@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   store: Ember.inject.service(),
   list: undefined,
   index: 0,
-  
+  imgPrefix: 'assets/images/',
   init() {
     this._super(...arguments);
     // this.list = [ {
@@ -53,21 +53,25 @@ export default Ember.Component.extend({
   
   actions: {
     nextScreen() {
+      //$('.next-screen').removeClass('active');
       if (this.index < this.indexMax()) {
         this.index++;
       } else {
         this.index=0;
       }
       this.actions.updateScreen.bind(this)();
+      
       return
     },
     prevScreen() {
+      //$('.prev-screen').removeClass('active')
       if (this.index > 0) {
         this.index--;
       } else {
         this.index=this.indexMax();
       }
       this.actions.updateScreen.bind(this)();
+     
       return
     },
     

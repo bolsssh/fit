@@ -1,17 +1,19 @@
-{{!--{{#if session.isAuthenticated}}
-  <div class="slider-menu">
+<div class="slider-menu">
+    {{slider-list list=this.model}}
+</div>
 
+{{!--
+{{#if session.isAuthenticated}}
+  <div class="slider-menu">
       {{slider-list list=this.model}}
  </div>
 {{else}}
- <div class="user-form">
+ <div class="info-form">
      {{#link-to 'login'}}Войти{{/link-to}}
  </div>
 {{/if}}
 
 
-
-
+{{#link-to 'workout'}}Войти{{/link-to}}
 --}}
 
-{{#link-to 'workout'}}Войти{{/link-to}}

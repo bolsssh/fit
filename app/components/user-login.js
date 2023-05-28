@@ -15,11 +15,12 @@ export default Ember.Component.extend({
       .authenticate('authenticator:jwt', login, password)
       .catch((reason) => {
         this.set('errorMessage', reason.error || reason);
+      }).then((result)=>{
+        if (this.get('session.isAuthenticated')) {
+          thisRouter.currentUser = login;
+          thisRouter.transitionToRoute('home');
+        }
       });
-      //console.log(this.get('session.isAuthenticated'));
-      if (this.get('session.isAuthenticated')) {
-        thisRouter.transitionToRoute('home');
-      }
     }
   }
 });

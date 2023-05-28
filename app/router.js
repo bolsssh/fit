@@ -12,6 +12,9 @@ Router.map(function() {
   this.route('login');
   this.route('workouts');
   this.route('workout');
+  this.route('profile');
+  this.route('result');
+  this.route('achievments');
 });
 
 export default Router;

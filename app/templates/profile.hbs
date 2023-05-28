@@ -1,0 +1,36 @@
+<div class="info-form">
+    <h1 for="info-form">Профиль</h1>
+    <form {{action "submit" on="submit"}}>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input"  value=user.login placeholder="введите логин"}}
+            <label class="text-field__label" for="login">Логин</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input"  value=user.password type="password" placeholder="введите password"}}
+            <label class="text-field__label" for="password">Пароль</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" value=user.passwordConfirmation type="password"
+                    placeholder="подтвердите пароль"}}
+            <label class="text-field__label" for="passwordConfirmation">Подтверждение пароля</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" value=user.age placeholder="введите возраст"}}
+            <label class="text-field__label" for="age">Возраст</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input"  value=user.height placeholder="введите рост"}}
+            <label class="text-field__label" for="height">Рост</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input"  value=user.weight placeholder="введите вес"}}
+            <label class="text-field__label" for="weight">Вес</label>
+        </div>
+        <div class="row text-right">
+            <button class="confirm-button" type="submit">Сохранить</button>
+        </div>
+    </form>
+    {{#if errorMessage}}
+        {{errorMessage}}
+    {{/if}}
+</div>   

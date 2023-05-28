@@ -1,18 +1,33 @@
-<div class="display-cover">
-    <video autoplay></video>
-    <canvas class="d-none"></canvas>
-
-    <div class="video-options">
-        <select name="" id="" class="custom-select">
-            <option value="">Select camera</option>
-        </select>
-    </div>
-
-    <img class="screenshot-image d-none" alt="">
+<div class="loader">Loading...</div>
+<div class="display-cover d-none">
+    <video width="800"  height="600" class="d-none" autoplay></video>
+    <canvas></canvas>
+<!--    <div id="shower">0</div>-->
+<!--    <div id="shower1">0</div>-->
+<!--    <div id="shower2">0</div>-->
+<!--<div id="shower3">0</div>-->
+    <!--  <div class="video-options custom-select">
+         <select name="" id="" class="custom-select"> d-none  width="640"  height="480"
+             <option value="">Выберете камеру</option>
+         </select>
+     </div> -->
+ 
+ <!--    <img class="screenshot-image d-none" alt=""> class="d-none"-->
 
     <div class="controls">
-        <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
-        <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
-        <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>
+        <div class="btn btn-danger playpause" onclick={{action "playStream"}} title="Play/Pause">
+            <img id='plapauseImg' src="assets/images/play2.svg" aria-hidden="true">
+        </div>
+        <div class="btn btn-danger stop" onclick={{action "stop"}} title="Stop">
+            <img src="assets/images/stop.svg" aria-hidden="true">
+        </div>
+        <div class="btn btn-danger hints" onclick={{action "disableHints"}} title="Disable hints">
+            <img src="assets/images/soundoff.svg" aria-hidden="true">
+        </div>
+<!--        <button class="btn btn-danger play" onclick={{action "playStream"}} title="Play/Pause"></button>-->
+<!--        <button class="btn btn-danger stop" onclick={{action "stop"}} title="Stop"></button> -->
+<!--        <button class="btn btn-danger hints" onclick={{action "disableHints"}} title="Disable hints"></button>-->
+<!--        <button class="btn btn-info pause d-none" onclick={{action "pauseStream"}} title="Pause"></button>--> 
+<!--        <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>-->
     </div>
 </div>

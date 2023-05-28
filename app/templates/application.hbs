@@ -1,3 +1,8 @@
+{{#if session.isAuthenticated}}
+    <div class = "welcome-login">
+     {{this.currentUser}}
+    </div>
+{{/if}}
 <div class="content">
     {{outlet}}
 </div>

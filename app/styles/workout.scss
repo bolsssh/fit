@@ -1,3 +1,5 @@
+@import "colors";
+
 
 .screenshot-image {
   width: 150px;
@@ -12,18 +14,37 @@
 }
 
 .display-cover {
-  display: flex;
+  //display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  margin: 5% auto;
+  //width: 80vw;
+  //height: 100%;
+  //margin: 5% auto;
   position: relative;
+  max-height: 90%;
+  max-width: 90%;
 }
 
 video {
   //margin: 5% auto;
-  width: 100%;
-  background: rgba(0,0,0,0.2);
+  //width: 100%;
+  //width: 100%;
+  //max-width: 100%;  
+  //background: rgba(0,0,0,0.2);
+  max-height: 90%;
+  max-width: 90%;
+  border-radius: 15px ;
+}
+
+canvas {
+  //margin: 5% auto;
+  //width: 100%;
+  //width: 100%;
+  //max-width: 100%;  
+  //background: rgba(0,0,0,0.2);
+  //max-height: 90%;
+  //max-width: 90%;
+  border-radius: 15px ;
 }
 
 .video-options {
@@ -34,10 +55,20 @@ video {
 
 .controls {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  //right: -7vw;
+  //margin: auto;
+  //top: 3vh;
+  left: 40%;
   display: flex;
-
+  margin-top: 20px;
+  gap: 30px;
+  div img {
+    height: 50px;
+    
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
 }
 
 .controls > button {
@@ -47,7 +78,7 @@ video {
   border-radius: 100%;
   margin: 0 6px;
   background: transparent;
-
+  
   &:hover {
     svg {
       color: white !important;
@@ -75,29 +106,66 @@ video {
 }
 
 .controls button:nth-child(1) {
-  border: 2px solid #D2002E;
-
-  svg {
-    color: #D2002E;
-
+  border: 2px solid #d7670b;
+  background: #d7670b;
+  
+  &:hover,
+  &:active {
+    background: #f37711;
   }
+  //&:before {
+  //  content: '\25b6';
+  //  width: 50%;
+  //}
+  //svg {
+  // // content: ;
+  //}
 }
 
 .controls button:nth-child(2) {
-  border: 2px solid #008496;
-
-  svg {
-    color: #008496;
+  //border: 2px solid $panelActive;
+  //background:linear-gradient(to right bottom,$panelActive ,$panelPassive);
+  border: none;
+  &:hover,
+  &:active {
+    background: $panelActive;
   }
+
+  &:before {
+    //float: left;
+    //width: 1em;
+    //text-align: center;
+    //font-size: 1.7em;
+    //margin: 0 0.5em 0 -1em;
+    //padding: 0 .2em;
+    //pointer-events: none;
+    content: '\25b6';
+  }
+  
+  //svg {
+  //  color: #008496;
+  //}
 }
 
 .controls button:nth-child(3) {
-  border: 2px solid #00B541;
+  border: 2px solid #c09a1c;
+  background: #c09a1c;
 
-  svg {
-    color: #00B541;
+  &:hover,
+  &:active {
+    background: #e8b613;
   }
+  //svg {
+  //  color: #008496;
+  //}
 }
+//.controls button:nth-child(3) {
+//  border: 2px solid #00B541;
+//
+//  svg {
+//    color: #00B541;
+//  }
+//}
 
 .controls > button {
   width: 45px;
@@ -112,4 +180,53 @@ video {
       color: white;
     }
   }
+}
+/*-----------select--------------------------*/
+
+.custom-select {
+  font-family: Helvetica;
+  //position: relative;
+  display: none;
+  //display: block;
+  //max-width: 400px;
+  //min-width: 180px;
+  margin: 0 auto;
+  padding: 5px ;
+  border: 1px solid #ffffff;
+  //border: 1px solid #818181;
+  //background-color: #ffffff;
+  background: transparent;
+  z-index: 10; 
+  
+  select {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    //padding: 12px 55px 15px 15px;
+    font-size: 14px;
+    color: $colorfulElement;
+    //box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  }
+
+  // &:after {
+  //  position: absolute;
+  //  right: 0;
+  //  top: 0;
+  //  width: 50px;
+  //  height: 100%;
+  //  line-height: 38px;
+  //  content: '\2228';
+  //  text-align: center;
+  //  color: #714BB9;
+  //  font-size: 24px;
+  //  border-left: 1px solid #3C1C78;
+  //  z-index: -1;
+  //}
 }

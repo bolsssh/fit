@@ -1,0 +1,20 @@
+<div class="loader">Loading...</div>
+<div class="display-cover d-none">
+    <video autoplay></video>
+    <canvas class="d-none"></canvas>
+    <div class="video-options custom-select">
+        <select name="" id="" class="custom-select">
+            <option value="">Выберете камеру</option>
+        </select>
+    </div>
+
+    <!--    <img class="screenshot-image d-none" alt="">-->
+
+    <div class="controls">
+        <button class="btn btn-danger play" onclick={{action "playStream"}} title="Play/Pause"></button>
+        <button class="btn btn-danger stop" onclick={{action "stop"}} title="Stop"></button>
+        <button class="btn btn-danger hints" onclick={{action "disableHints"}} title="Disable hints"></button>
+        <!--        <button class="btn btn-info pause d-none" onclick={{action "pauseStream"}} title="Pause"></button>-->
+        <!--        <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>-->
+    </div>
+</div>

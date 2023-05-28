@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Core</title>
@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="assets/core.css">
 
     {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+</head>
+<body>
+{{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/core.js"></script>
+<script src="assets/vendor.js"></script>
+<script src="assets/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
 
-    {{content-for "body-footer"}}
-  </body>
+{{content-for "body-footer"}}
+</body>
 </html>

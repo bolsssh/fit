@@ -1,0 +1,41 @@
+<div class="info-form">
+    <h1 for="info-form">Настройки тренировки</h1>
+    <form {{action 'start' on='submit'}}>
+        <h2>Добавить упражнение</h2>
+        <label class="text-field__label" for="exercise">Упражнение:</label>
+        <select id="exercise">
+            <option value="Приседания">Приседания</option>
+            <option value="Отжимания">Отжимания</option>
+            <option value="Сгибания бицепса">Сгибания бицепса</option>
+            <option value="Наклоны вперед">Наклоны вперед</option>
+        </select>
+        <div style="margin-top: 12px" class="text-field text-field_floating-2">
+            {{input class="text-field__input repet" value=repet placeholder="1"}}
+            <label class="text-field__label" for="repet">Повторения:</label>
+        </div>
+<!--        <label for=""></label>-->
+<!--        <input type="number" id="repet">-->
+        <div class="button" onclick={{action 'addExercise'}}>Добавить</div>
+        
+        <div>
+            <h2>План</h2>
+            <ul id="exercise-list"></ul>
+        </div>
+        {{!--
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" id='login' placeholder='введите логин' value=login}}
+            <label class="text-field__label" for="login">Логин</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            {{input class="text-field__input" id='password' placeholder='введите пароль' type='password' value=password}}
+            <label class="text-field__label" for="password">Пароль</label>
+        </div>
+        --}}
+        <div class="flex-row-two">
+            <button type="submit">Начать</button>
+        </div>
+        {{#if errorMessage}}
+            <p>{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>

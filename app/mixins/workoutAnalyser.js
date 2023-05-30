@@ -9,30 +9,16 @@ export default Ember.Mixin.create({
   
   //todo
   exerciseList: [
-    { name: 'Squats', repetitions: 3 },
+    { name: 'Squats', repetitions: 5 },
   ],
   
   Calories: {
-    'Squats': 5,              // Количество калорий, сжигаемых за одно приседание
+    'Squats': 0.66,            // Количество калорий, сжигаемых за одно приседание
     'Push-ups': 2,          // Количество калорий, сжигаемых за одно отжимание
     'Bicep Curls': 3,       // Количество калорий, сжигаемых за одно сгибание бицепса
     'Forward Bends': 4,     // Количество калорий, сжигаемых за один наклон туловища вперед
   },
   currentExerciseIndex: 0,
-  
-  //TODO
-  addExercise() {
-    const exerciseName = exerciseSelectElement.value;
-    const repetitions = parseInt(repetitionsInputElement.value);
-    
-    // Создание нового элемента списка с упражнением
-    const exerciseItem = document.createElement('li');
-    exerciseItem.textContent = `${ exerciseName } (${ repetitions } repetitions)`;
-    
-    // Добавление элемента списка в список плана тренировки
-    this.exerciseList.push(exerciseItem);
-    //exerciseListElement.appendChild(exerciseItem);
-  },
   
   // calculateAngle(p1, p2, p3) {
   //   const v1 = { x: p1.x - p2.x, y: p1.y - p2.y };
@@ -86,7 +72,16 @@ export default Ember.Mixin.create({
       //   break;
     }
   },
+  printSuccess(){
+    let element = document.querySelector('.success-message');
   
+    element.style.transition = 'none';
+    element.style.opacity = '1';
+    /* This line seems to 'reset' the element so that the transition can be run again. */
+    void element.offsetWidth;
+    element.style.transition = 'opacity 2s';
+    element.style.opacity = '0';
+  },
   // // Функция для отслеживания приседаний
   detectSquats(repetitions) {
     // Получение позы текущего кадра
@@ -117,6 +112,8 @@ export default Ember.Mixin.create({
       this.isFlexing = true;
     } else if ((leftAngle < squatAngleThreshold || rightAngle < squatAngleThreshold) && this.isFlexing) {
       this.currentRepetitions++;
+      this.printSuccess();
+      console.log('success')
       this.totalCaloriesBurned += this.Calories.Squats;
       this.isFlexing = false;
     }

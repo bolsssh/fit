@@ -13,7 +13,12 @@ export default Ember.Route.extend({
       elem.label = workout.get('name');
       elem.imgSource = workout.get('imgName');
       elem.text = workout.get('description');
-      elem.route = 'workout';
+      if(elem.label != "Настраиваемая тренировка") {
+        elem.route = 'workout';
+      }
+      else {
+        elem.route = 'customworkout';
+      }
       return elem
     }));
   },

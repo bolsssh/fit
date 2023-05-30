@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('profile');
   this.route('result');
   this.route('achievments');
+  this.route('customworkout');
 });
 
 export default Router;

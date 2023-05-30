@@ -19,7 +19,7 @@ export default Ember.Controller.extend(HintMixin, TimerMixin, WorkoutAnalyserMix
   canvas: undefined,
   videoPause: undefined,
   active: false,
-
+  
   actions: {
     didRender() {
       let self = this;
@@ -156,7 +156,7 @@ export default Ember.Controller.extend(HintMixin, TimerMixin, WorkoutAnalyserMix
       let appController = this.container.lookup('controller:application'),
         result = this.store.createRecord('result', {
           duration: this.timer.end(),
-          score: Math.random() * 100 | 0,
+          score: this.totalCaloriesBurned.toFixed(2),
           login: appController.currentUser,
         })
       result.save().catch((error) => {

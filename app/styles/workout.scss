@@ -58,15 +58,22 @@ canvas {
   //right: -7vw;
   //margin: auto;
   //top: 3vh;
-  left: 40%;
+  left: 38%;
   display: flex;
   margin-top: 20px;
   gap: 30px;
+  background: #fafafa;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   div img {
     height: 50px;
-    
+    filter: invert(20%) sepia(47%) saturate(4044%) hue-rotate(222deg) brightness(102%) contrast(89%);
+    //filter: invert(0.2);
+    shape-rendering: auto;
     &:hover {
-      filter: brightness(0.8);
+      filter: invert(20%) sepia(47%) saturate(4044%) hue-rotate(222deg) brightness(302%) contrast(89%);
     }
   }
 }
@@ -78,10 +85,10 @@ canvas {
   border-radius: 100%;
   margin: 0 6px;
   background: transparent;
-  
   &:hover {
     svg {
-      color: white !important;
+      color: $panelActive !important;
+      //color: white !important;
     }
   }
 }

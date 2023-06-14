@@ -1,5 +1,7 @@
+@import "colors";
+
 .loader {
-  color: #ffffff;
+  color: $panelActive;
   font-size: 20px;
   margin: 100px auto;
   width: 1em;

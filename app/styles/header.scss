@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: $panelActive;
+  
+  h1 {
+    font-size: 30px;
+    position: absolute;
+    top: 4px;
+    left: 20px;
+    margin: 0;
+  }
+  
+  .btn>img {
+    position: absolute;
+    right: 25px;
+    top: 8px;
+    height: 34px;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}

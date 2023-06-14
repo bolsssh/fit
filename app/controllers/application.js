@@ -12,8 +12,10 @@ export default Ember.Controller.extend({
   },
   
   actions: {
-    // invalidateSession() {
-    //   this.get('session').invalidate();
-    // }
+    invalidateSession() {
+      this.get('session').invalidate();
+      let appController = this.container.lookup('controller:application');
+      appController.transitionToRoute('login');
+    }
   }
 });

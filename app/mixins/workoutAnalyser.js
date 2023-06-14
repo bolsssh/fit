@@ -8,9 +8,9 @@ export default Ember.Mixin.create({
   isFlexing: false,
   
   //todo
-  exerciseList: [
-    { name: 'Squats', repetitions: 5 },
-  ],
+  // exerciseList: [
+  //   { name: 'Squats', repetitions: 5 },
+  // ],
   
   Calories: {
     'Squats': 0.66,            // Количество калорий, сжигаемых за одно приседание

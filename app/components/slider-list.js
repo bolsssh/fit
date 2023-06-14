@@ -83,7 +83,8 @@ export default Ember.Component.extend({
     
     transition() {
       let thisRouter = this.container.lookup('controller:application');
-      thisRouter.transitionToRoute(this.list[this.index].route);
+      let data = Ember.isNone(this.list[this.index].data) ? undefined: this.list[this.index].data;
+      thisRouter.transitionToRoute(this.list[this.index].route).data={data:data};
     }
     // setBtns: function() {
     //   var $lastBtn, $nextBtn, $prevBtn;

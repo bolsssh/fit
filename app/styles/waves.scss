@@ -1,0 +1,60 @@
+@import 'colors';
+
+//.waves {
+//  width: 160px;
+//  height: 160px;
+//  position: relative;
+//  margin:40px;
+//  border-radius: 10px;
+//  background: #fff;
+//  box-shadow: 0 0 20px #a4a4a4;
+//  overflow: hidden;
+//  z-index: -5000;
+//}
+
+.wave1, .wave2, .wave3, .wave4{
+  position: absolute;
+  width: 200vh;
+  height: 200vh;
+  z-index: -5000;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.19);
+}
+
+.wave1{
+  left: -20%; /*определяем положение блока*/
+  top: 90%;
+  background-color: $panelActive;
+  //background-color: #a0e9ff;  /*окрашиваем блок*/
+  border-radius: 45%;  /*закругляем углы*/
+  animation: wave 58s linear infinite;  /*добавляем анимацию*/
+}
+.wave2{
+  left: -20%;  /*определяем положение блока*/
+  top: 94%;
+  background-color: $panelPassive;
+  //background-color: #57d0ff;  /*окрашиваем блок*/
+  border-radius: 45%;  /*закругляем углы*/
+  animation: wave 34s linear infinite; /*добавляем анимацию*/
+}
+.wave3{
+  left: 20%;  /*определяем положение блока*/
+  top: 94%;
+  background-color: $panelActive;
+ // background-color: #a0e9ff;  /*окрашиваем блок*/
+  border-radius: 45%;  /*закругляем углы*/
+  animation: wave 40s linear infinite; /*добавляем анимацию*/
+}
+.wave4{
+  left: 18%;  /*определяем положение блока*/
+  top: 94%;
+  background-color: $panelPassive;
+  //background-color: #57d0ff;
+  border-radius: 45%;  /*закругляем углы*/
+  animation: wave 31s linear infinite; /*добавляем анимацию*/
+}
+
+@keyframes wave {
+  100% {
+    transform: rotate(360deg);
+  }
+}

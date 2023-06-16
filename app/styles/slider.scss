@@ -31,7 +31,7 @@ body {
   height: 40px;
   width: 120px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   margin-top: -20px;
   margin-left: -60px;
@@ -46,6 +46,8 @@ body {
   border-radius: 6px;
   display: inline-flex;
   flex-direction: column;
+  position: relative;
+  top: -5vh;
   flex: 0 0 auto;
   font-size: $module-font-size;
   width: 450px;
